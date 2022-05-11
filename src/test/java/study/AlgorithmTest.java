@@ -2,6 +2,7 @@ package study;
 
 import leetcode.easy.explorer.IsThereAnyIndex;
 import leetcode.easy.explorer.RemoveDuplicatesfromSortedArray;
+import leetcode.easy.explorer.VaildMountainArray;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -24,5 +25,17 @@ public class AlgorithmTest {
         IsThereAnyIndex it = new IsThereAnyIndex();
         int[] arr = {-2,0,10,-19,4,6,-8};
         Assertions.assertThat(it.checkIfExist(arr)).isFalse();
+    }
+
+    @Test
+    @DisplayName("산올라가기 코드")
+    void isRightMountain(){
+        VaildMountainArray vm = new VaildMountainArray();
+
+        int[] arr = {4,4,3,2,1};
+
+        boolean result = vm.validMountainArray(arr);
+
+        Assertions.assertThat(result).isFalse();
     }
 }
