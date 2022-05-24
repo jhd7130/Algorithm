@@ -1,5 +1,6 @@
 package study;
 
+import leetcode.easy.explorer.Height;
 import leetcode.easy.explorer.IsThereAnyIndex;
 import leetcode.easy.explorer.RemoveDuplicatesfromSortedArray;
 import leetcode.easy.explorer.VaildMountainArray;
@@ -37,5 +38,16 @@ public class AlgorithmTest {
         boolean result = vm.validMountainArray(arr);
 
         Assertions.assertThat(result).isFalse();
+    }
+
+    @Test
+    @DisplayName("예상되는 키순 비교하기")
+    void getHeight(){
+        Height he = new Height();
+        int[] order = {1,3,2,5,4};
+
+        // int result = he.heightChecker(order);
+        // Assertions.assertThat(result).isEqualTo(4);
+        // System.out.println("result = " + result);
     }
 }

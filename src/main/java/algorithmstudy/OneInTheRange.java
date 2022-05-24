@@ -9,6 +9,7 @@ public class OneInTheRange {
     }
 
     public int numOfOnes(int s, int e) {
+        //Prefix sum, 누적 합계
         int count =0;
 
         for(int a = s ; a <= e; a++){
