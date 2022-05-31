@@ -1,19 +1,9 @@
 package leetcode.easy.explorer;
 
 public class Height {
-
-    public static void main(String[] args) {
-        int[] arr = {1,3,2,9,4};
-        Height height = new Height();
-
-        int cnt = height.heightChecker(arr);
-
-        System.out.println("cnt = " + cnt);
-    }
-
     public int heightChecker(int[] heights) {
         // 1,3,2,5,4
-        int[] expected = makeorder(heights);
+        int[] expected = makeOrder(heights);
         int cnt = compareCnt(expected,heights);
 
         return cnt;
@@ -21,7 +11,7 @@ public class Height {
 
 
     // 정렬.
-    private final int[] makeorder(int[] height){
+    private final int[] makeOrder(int[] height){
 
         int[] expected = new int [ height.length ] ;
         int len = height.length;

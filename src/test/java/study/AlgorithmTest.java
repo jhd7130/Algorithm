@@ -1,5 +1,7 @@
 package study;
 
+import leetcode.easy.explorer.ArrayandString.FindPivotIndex;
+import leetcode.easy.explorer.ArrayandString.LargestNumberAtLeastTwiceofOthers;
 import leetcode.easy.explorer.Height;
 import leetcode.easy.explorer.IsThereAnyIndex;
 import leetcode.easy.explorer.RemoveDuplicatesfromSortedArray;
@@ -46,8 +48,27 @@ public class AlgorithmTest {
         Height he = new Height();
         int[] order = {1,3,2,5,4};
 
-        // int result = he.heightChecker(order);
-        // Assertions.assertThat(result).isEqualTo(4);
-        // System.out.println("result = " + result);
+         int result = he.heightChecker(order);
+         Assertions.assertThat(result).isEqualTo(4);
     }
+
+    @Test
+    @DisplayName("pivot검사")
+    void getPivot(){
+        FindPivotIndex fp = new FindPivotIndex();
+        int[] b = {1,7,3,6,5,6};
+        int a = fp.pivotIndex(b);
+
+        Assertions.assertThat(a).isEqualTo(3);
+    }
+    @Test
+    @DisplayName("최대 값 인덱스")
+    void isCollect(){
+        LargestNumberAtLeastTwiceofOthers lna = new LargestNumberAtLeastTwiceofOthers();
+        int[] b = {3,6,1,0};
+        int a = lna.dominantIndex(b);
+
+        Assertions.assertThat(a).isEqualTo(3);
+    }
+
 }
