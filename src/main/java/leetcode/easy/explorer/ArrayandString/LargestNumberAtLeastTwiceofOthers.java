@@ -1,14 +1,11 @@
 package leetcode.easy.explorer.ArrayandString;
 
 public class LargestNumberAtLeastTwiceofOthers {
+    public int dominantIndex(int[] nums) {
 
-        public int dominantIndex(int[] nums) {
+    return vaildValue(isMaxIndex(nums), nums);
 
-        return vaildValue(isMaxIndex(nums), nums);
-
-        }
-
-
+ }
     // 가장 큰 값을 찾는 메서드
     private int isMaxIndex(int[] nums){
         int maxIdx = 0;
@@ -19,8 +16,6 @@ public class LargestNumberAtLeastTwiceofOthers {
                 maxIdx = i;
             }
         }
-        System.out.println(maxValue);
-        System.out.println(maxIdx);
         return maxIdx;
     }
 
@@ -31,7 +26,6 @@ public class LargestNumberAtLeastTwiceofOthers {
             if ( i == max || nums[i] == 0 ){
                 continue;
             } else if ( nums[max]/nums[i] < 2 ){
-                System.out.println("i" + nums[max]/nums[i]);
                 return -1;
             }
         }
